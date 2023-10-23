@@ -8,9 +8,11 @@ jobs:
   clang-format:
       runs-on: ubuntu-latest
       steps:
-      - name: Adds GitHub workspace as safe directory
-        run: git config --global --add safe.directory $GITHUB_WORKSPACE
+      # - name: Adds GitHub workspace as safe directory
+      #   run: git config --global --add safe.directory $GITHUB_WORKSPACE
       - uses: actions/checkout@v2
+        with:
+          set-safe-directory: '*'
       - uses: AutoModality/action-ros-clang-format@v1
         env:
           GITHUB_TOKEN: ${{ secrets.FORMATTER }}
