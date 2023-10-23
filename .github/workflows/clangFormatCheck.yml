@@ -34,6 +34,25 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: clang-format Check
+        on: [push, pull_request]
+        jobs:
+          formatting-check:
+            name: Formatting Check
+            runs-on: ubuntu-latest
+            strategy:
+              matrix:
+                path:
+                  - 'src'
+                  - 'include'
+            steps:
+            - uses: actions/checkout@v3
+            - name: Run clang-format style check for C/C++/Protobuf programs.
+              uses: jidicula/clang-format-action@v4.11.0
+              with:
+                clang-format-version: '13'
+                check-path: ${{ matrix.path }}
+                fallback-style: 'Mozilla' # optional          
       # - name: clang-format Check
       #   # You may pin to the exact commit or the version.
       #   # uses: jidicula/clang-format-action@f62da5e3d3a2d88ff364771d9d938773a618ab5e
