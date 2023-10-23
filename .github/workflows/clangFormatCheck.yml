@@ -26,12 +26,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run clang-format style check for C/C++/Protobuf programs.
-      run: echo "{markdown content}" >> $GITHUB_STEP_SUMMARY
       uses: jidicula/clang-format-action@v4.11.0
       with:
         clang-format-version: '13'
         check-path: ${{ matrix.path }}
         fallback-style: 'Mozilla'
+    - name: Generate summary
+      run: echo "{markdown content}" >> $GITHUB_STEP_SUMMARY
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
