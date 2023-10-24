@@ -53,11 +53,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - uses: actions/checkout@v2
-      - uses: DoozyX/clang-format-lint-action@v0.14
+      - uses: DoozyX/clang-format-lint-action@v0.16.2
         with:
           source: '.'
           exclude: './third_party ./external'
-          extensions: 'h,cpp'
+          extensions: 'hpp,h,c,cpp'
           clangFormatVersion: 16
           style: chromium          
       # - name: clang-format Check
