@@ -10,11 +10,15 @@ jobs:
       steps:
       # - name: Adds GitHub workspace as safe directory
       #   run: git config --global --add safe.directory $GITHUB_WORKSPACE
-      - name: Set up Git
+      - name: Set up JGit
         run: |
-          sudo add-apt-repository -y ppa:git-core/ppa
-          sudo apt-get update
-          sudo apt-get install -y git
+          wget -O jgit.jar https://repo1.maven.org/maven2/org/eclipse/jgit/org.eclipse.jgit/5.13.0.202109080827-r/org.eclipse.jgit-5.13.0.202109080827-r.jar
+          alias git="java -jar jgit.jar"      
+      # - name: Set up Git
+      #   run: |
+      #     sudo add-apt-repository -y ppa:git-core/ppa
+      #     sudo apt-get update
+      #     sudo apt-get install -y git
       - name: Adds GitHub workspace as safe directory
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
         # run: git config --global --add safe.directory /github/workspace
