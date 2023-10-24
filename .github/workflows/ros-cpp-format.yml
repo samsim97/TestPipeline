@@ -27,4 +27,5 @@ jobs:
           set-safe-directory: '*'
       - uses: AutoModality/action-ros-clang-format@v1
         env:
+          GIT_TEST_DEBUG_UNSAFE_DIRECTORIES: true
           GITHUB_TOKEN: ${{ secrets.FORMATTER }}
