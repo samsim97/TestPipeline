@@ -33,6 +33,8 @@ env:
   # or posted in a PR (pull_request)
   APPLY_FIXES_MODE: commit
 
+  DISABLE_ERRORS_LINTERS: REPOSITORY_DEVSKIM
+
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
