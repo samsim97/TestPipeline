@@ -58,7 +58,7 @@ jobs:
           source: '.'
           exclude: './third_party ./external'
           extensions: 'h,cpp'
-          clangFormatVersion: 14
+          clangFormatVersion: 16.0.3
           style: chromium          
       # - name: clang-format Check
       #   # You may pin to the exact commit or the version.
