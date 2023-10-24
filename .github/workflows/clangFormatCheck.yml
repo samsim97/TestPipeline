@@ -52,14 +52,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - uses: actions/checkout@v2
-      - uses: DoozyX/clang-format-lint-action@v0.16.2
-        with:
-          source: '.'
-          exclude: './third_party ./external'
-          extensions: 'hpp,h,c,cpp'
-          clangFormatVersion: 16
-          style: chromium          
+      # - uses: actions/checkout@v2
+      # - uses: DoozyX/clang-format-lint-action@v0.16.2
+      #   with:
+      #     source: '.'
+      #     exclude: './third_party ./external'
+      #     extensions: 'hpp,h,c,cpp'
+      #     clangFormatVersion: 16
+      #     style: chromium          
       # - name: clang-format Check
       #   # You may pin to the exact commit or the version.
       #   # uses: jidicula/clang-format-action@f62da5e3d3a2d88ff364771d9d938773a618ab5e
