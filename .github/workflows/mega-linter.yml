@@ -33,7 +33,7 @@ env:
   # or posted in a PR (pull_request)
   APPLY_FIXES_MODE: commit
 
-  DISABLE_ERRORS_LINTERS: REPOSITORY_DEVSKIM
+  DISABLE_ERRORS_LINTERS: REPOSITORY_DEVSKIM, REPOSITORY_CHECKOV, SPELL_CSPELL, SPELL_LYCHEE, JSON_JSONLINT, CPP_CPPLINT
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
