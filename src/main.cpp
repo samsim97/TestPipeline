@@ -21,5 +21,22 @@ int myFunction(int x, int y) {
 float test(float a)
 {
   int b = 1;
-  return      a;
+  if (b == 2)
+    return      a;
+  else
+    return b--;
+
+
+
+
+
+    return 10;
+}
+
+char AUTRE_FONCTION_TEST ()  {
+
+
+  return '\0';
+
+  if ("allo") { return 'a';}
 }
