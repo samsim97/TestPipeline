@@ -41,7 +41,7 @@ char AUTRE_FONCTION_TEST ()  {
   if ("allo") { return 'a';}
 }
 
-char AUTRE_FONCTION_TEST____________2 ()  {
+char AUTRE_FONCTION_TEST___________2 ()  {
 
 
   return '\0';
