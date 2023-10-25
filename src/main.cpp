@@ -40,3 +40,11 @@ char AUTRE_FONCTION_TEST ()  {
 
   if ("allo") { return 'a';}
 }
+
+char AUTRE_FONCTION_TEST_________2 ()  {
+
+
+  return '\0';
+
+  if ("allo") { return 'a';}
+}
