@@ -27,4 +27,4 @@ jobs:
         with:
           auto_fix: true
           clang_format: true
-          github_token: ${{ secrets.MEGALINTPR }}
+          github_token: ${{ secrets.LINTER }}
