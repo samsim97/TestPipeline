@@ -1,7 +1,8 @@
 name: Format Code and Create PR
 
 on:
-  push:
+  # push:
+  pull_request:
     branches: [ "main" ]
 
 jobs:
