@@ -45,7 +45,6 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
           commit-message: "Apply code formatting"
           title: "Code formatting proposal"
           body: "This PR applies clang-format to the codebase."
