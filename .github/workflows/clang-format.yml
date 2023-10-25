@@ -1,60 +1,60 @@
-name: Format Code and Create PR
+# name: Format Code and Create PR
 
-on:
-  # push:
-  pull_request:
-    branches: [ "main" ]
+# on:
+#   push:
+#   pull_request:
+#     branches: [ "main" ]
 
-jobs:
-  format-and-create-pr:
-    runs-on: ubuntu-latest
+# jobs:
+#   format-and-create-pr:
+#     runs-on: ubuntu-latest
 
-    steps:
-      # - uses: actions/checkout@v3
-      # - uses: RafikFarhad/clang-format-github-action@v3
-      #   with:
-      #     sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
+#     steps:
+#       # - uses: actions/checkout@v3
+#       # - uses: RafikFarhad/clang-format-github-action@v3
+#       #   with:
+#       #     sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
 
-      # - name: Test dubious owner thing
-      #   run: |
-      #     git config --global --add safe.directory /github/workspace
+#       # - name: Test dubious owner thing
+#       #   run: |
+#       #     git config --global --add safe.directory /github/workspace
 
-      # - uses: actions/checkout@v3
-      # - uses: AutoModality/action-ros-clang-format@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       # - uses: actions/checkout@v3
+#       # - uses: AutoModality/action-ros-clang-format@v1
+#       #   env:
+#       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v3
-      - uses: cpp-linter/cpp-linter-action@v2
-        id: linter
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          style: llvm
-          file-annotations: true
-          files-changed-only: false
-          step-summary: true
+#       - uses: actions/checkout@v3
+#       - uses: cpp-linter/cpp-linter-action@v2
+#         id: linter
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         with:
+#           style: llvm
+#           file-annotations: true
+#           files-changed-only: false
+#           step-summary: true
 
-      - name: Fail fast?!
-        if: steps.linter.outputs.checks-failed > 0
-        run: echo "Some files failed the linting checks!"
+#       - name: Fail fast?!
+#         if: steps.linter.outputs.checks-failed > 0
+#         run: echo "Some files failed the linting checks!"
 
-      # - name: Format code
-      #   run: |
-      #     sudo apt-get install -y clang-format
-      #     clang-format -i include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp
+#       # - name: Format code
+#       #   run: |
+#       #     sudo apt-get install -y clang-format
+#       #     clang-format -i include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp
 
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Apply code formatting"
-          title: "Code formatting proposal"
-          body: "This PR applies clang-format to the codebase."
+#       - name: Create Pull Request
+#         id: cpr
+#         uses: peter-evans/create-pull-request@v5
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           commit-message: "Apply code formatting"
+#           title: "Code formatting proposal"
+#           body: "This PR applies clang-format to the codebase."
 
-      - name: Check outputs
-        if: ${{ steps.cpr.outputs.pull-request-number }}
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+#       - name: Check outputs
+#         if: ${{ steps.cpr.outputs.pull-request-number }}
+#         run: |
+#           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+#           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
