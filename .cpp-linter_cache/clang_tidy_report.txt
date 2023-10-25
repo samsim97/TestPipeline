@@ -1,0 +1,67 @@
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:1:10: error: 'Arduino.h' file not found [clang-diagnostic-error]
+#include <Arduino.h>
+         ^
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:4:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int myFunction(int, int);
+~~~ ^
+auto                     -> int
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:4:19: warning: all parameters should be named in a function [readability-named-parameter]
+int myFunction(int, int);
+                  ^
+                   /*x*/  /*y*/
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:5:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+float testar(float);
+~~~~~ ^
+auto                -> float
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:17:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int myFunction(int x, int y) {
+~~~ ^
+auto                         -> int
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:21:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+float test(float a)
+~~~~~ ^
+auto                -> float
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:24:14: warning: statement should be inside braces [readability-braces-around-statements]
+  if (b == 2)
+             ^
+              {
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:26:3: warning: do not use 'else' after 'return' [readability-else-after-return]
+  else
+  ^~~~
+      return b--
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:26:7: warning: statement should be inside braces [readability-braces-around-statements]
+  else
+      ^
+note: this fix will not be applied because it overlaps with another fix
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:27:12: warning: narrowing conversion from 'int' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    return b--;
+           ^
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:33:5: warning: misleading indentation: statement is indented too deeply [readability-misleading-indentation]
+    return 10;
+    ^
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:24:3: note: did you mean this line to be inside this 'if'
+  if (b == 2)
+  ^
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:33:12: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    return 10;
+           ^
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:36:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+char AUTRE_FONCTION_TEST ()  {
+~~~~ ^
+auto                        -> char
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:41:7: warning: implicit conversion 'const char *' -> bool [readability-implicit-bool-conversion]
+  if ("allo") { return 'a';}
+      ^~~~~~
+      true
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:44:6: warning: declaration uses identifier 'AUTRE_FONCTION_TEST___________2', which is a reserved identifier [bugprone-reserved-identifier]
+char AUTRE_FONCTION_TEST___________2 ()  {
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     AUTRE_FONCTION_TEST_2
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:44:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+char AUTRE_FONCTION_TEST___________2 ()  {
+~~~~ ^
+auto                                    -> char
+/home/runner/work/TestPipeline/TestPipeline/src/main.cpp:49:7: warning: implicit conversion 'const char *' -> bool [readability-implicit-bool-conversion]
+  if ("allo") { return 'a';}
+      ^~~~~~
+      true
