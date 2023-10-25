@@ -12,8 +12,8 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         uses: RafikFarhad/clang-format-github-action@v3
-          with:
-            sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
+        with:
+          sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
 
 
       # - name: Format code
