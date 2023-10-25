@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<replacements xml:space='preserve' incomplete_format='false'>
+<replacement offset='330' length='3'> </replacement>
+<replacement offset='346' length='1'> </replacement>
+<replacement offset='369' length='1'> </replacement>
+<replacement offset='409' length='6'> </replacement>
+<replacement offset='440' length='10'>&#10;&#10;  </replacement>
+<replacement offset='488' length='1'></replacement>
+<replacement offset='491' length='2'> </replacement>
+<replacement offset='494' length='5'>&#10;&#10;  </replacement>
+<replacement offset='528' length='1'>&#10;    </replacement>
+<replacement offset='540' length='0'>&#10;  </replacement>
+<replacement offset='581' length='1'></replacement>
+<replacement offset='584' length='2'> </replacement>
+<replacement offset='587' length='5'>&#10;&#10;  </replacement>
+<replacement offset='621' length='1'>&#10;    </replacement>
+<replacement offset='633' length='0'>&#10;  </replacement>
+</replacements>
