@@ -30,6 +30,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           style: llvm
+          files-changed-only: false
+          step-summary: true
 
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed > 0
