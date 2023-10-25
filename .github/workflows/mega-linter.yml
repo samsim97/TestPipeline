@@ -17,7 +17,7 @@ env: # Comment env block if you don't want to apply fixes
   DISABLE_ERRORS: true
   # DISABLE_ERRORS_LINTERS: true
   DISABLE_LINTERS: REPOSITORY_DEVSKIM
-  FILTER_REGEX_INCLUDE: (src/|include)
+  # FILTER_REGEX_INCLUDE: (src/|include)
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}

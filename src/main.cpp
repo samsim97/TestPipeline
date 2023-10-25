@@ -48,3 +48,4 @@ char AUTRE_FONCTION_TEST___________2 ()  {
 
   if ("allo") { return 'a';}
 }
+testaraetea
