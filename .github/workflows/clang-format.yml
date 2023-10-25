@@ -9,12 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Check out code
-      - uses: actions/checkout@v3
-      - uses: RafikFarhad/clang-format-github-action@v3
-        with:
-          sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
+      # - uses: actions/checkout@v3
+      # - uses: RafikFarhad/clang-format-github-action@v3
+      #   with:
+      #     sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
 
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Format code
+        uses: AndrewGaspar/cpp-auto-formatter@v1
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'Formatter bot'
+          git config --global user.email 'formatter-bot@pipelinetest.com'
+          git add -A
+          git commit -m "Apply code formatting"
 
       # - name: Format code
       #   run: |
