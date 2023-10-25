@@ -41,9 +41,17 @@ jobs:
       #     clang-format -i include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
           commit-message: "Apply code formatting"
           title: "Code formatting proposal"
           body: "This PR applies clang-format to the codebase."
+
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
