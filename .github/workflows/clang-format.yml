@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Check out code
-        - uses: actions/checkout@v3
-        - uses: RafikFarhad/clang-format-github-action@v3
-          with:
-            sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
+      - name: Check out code
+      - uses: actions/checkout@v3
+      - uses: RafikFarhad/clang-format-github-action@v3
+        with:
+          sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
 
 
       # - name: Format code
