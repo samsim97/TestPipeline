@@ -14,18 +14,10 @@ jobs:
       #   with:
       #     sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
 
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Format code
-        uses: AndrewGaspar/cpp-auto-formatter@v1
-
-      - name: Commit changes
-        run: |
-          git config --global user.name 'Formatter bot'
-          git config --global user.email 'formatter-bot@pipelinetest.com'
-          git add -A
-          git commit -m "Apply code formatting"
+      - uses: actions/checkout@v2
+      - uses: AutoModality/action-ros-clang-format@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Format code
       #   run: |
