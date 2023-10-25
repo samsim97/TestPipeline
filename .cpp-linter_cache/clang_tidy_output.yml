@@ -1,0 +1,238 @@
+---
+MainSourceFile:  '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+Diagnostics:
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''Arduino.h'' file not found'
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      9
+      Replacements:    []
+    Level:           Error
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+    Ranges:
+      - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+        FileOffset:      9
+        Length:          11
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      61
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          57
+          Length:          3
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          81
+          Length:          0
+          ReplacementText: ' -> int'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  readability-named-parameter
+    DiagnosticMessage:
+      Message:         all parameters should be named in a function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      75
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          75
+          Length:          0
+          ReplacementText: ' /*x*/'
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          80
+          Length:          0
+          ReplacementText: ' /*y*/'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      89
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          83
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          102
+          Length:          0
+          ReplacementText: ' -> float'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      304
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          300
+          Length:          3
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          328
+          Length:          0
+          ReplacementText: ' -> int'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      356
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          350
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          369
+          Length:          0
+          ReplacementText: ' -> float'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      398
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          398
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          420
+          Length:          0
+          ReplacementText: '} '
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  readability-else-after-return
+    DiagnosticMessage:
+      Message:         'do not use ''else'' after ''return'''
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      420
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          420
+          Length:          19
+          ReplacementText: '    return b--'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+    Ranges:
+      - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+        FileOffset:      420
+        Length:          0
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      424
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  bugprone-narrowing-conversions
+    DiagnosticMessage:
+      Message:         'narrowing conversion from ''int'' to ''float'''
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      436
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  readability-misleading-indentation
+    DiagnosticMessage:
+      Message:         'misleading indentation: statement is indented too deeply'
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      450
+      Replacements:    []
+    Notes:
+      - Message:         'did you mean this line to be inside this ''if'''
+        FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+        FileOffset:      387
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '10 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      457
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      469
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          464
+          Length:          4
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          491
+          Length:          0
+          ReplacementText: ' -> char'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  readability-implicit-bool-conversion
+    DiagnosticMessage:
+      Message:         'implicit conversion ''const char *'' -> bool'
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      519
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          519
+          Length:          6
+          ReplacementText: 'true'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  bugprone-reserved-identifier
+    DiagnosticMessage:
+      Message:         'declaration uses identifier ''AUTRE_FONCTION_TEST___________2'', which is a reserved identifier'
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      550
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          550
+          Length:          31
+          ReplacementText: AUTRE_FONCTION_TEST_2
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      550
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          545
+          Length:          4
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          584
+          Length:          0
+          ReplacementText: ' -> char'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+  - DiagnosticName:  readability-implicit-bool-conversion
+    DiagnosticMessage:
+      Message:         'implicit conversion ''const char *'' -> bool'
+      FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+      FileOffset:      612
+      Replacements:
+        - FilePath:        '/home/runner/work/TestPipeline/TestPipeline/src/main.cpp'
+          Offset:          612
+          Length:          6
+          ReplacementText: 'true'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/TestPipeline/TestPipeline'
+...
