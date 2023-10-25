@@ -14,6 +14,10 @@ jobs:
       #   with:
       #     sources: "include/**/*.h,include/**/*.hpp,src/**/*.c,src/**/*.cpp"
 
+      - name: Test dubious owner thing
+        run: |
+          git config --global --add safe.directory /github/workspace
+
       - uses: actions/checkout@v3
       - uses: AutoModality/action-ros-clang-format@v1
         env:
