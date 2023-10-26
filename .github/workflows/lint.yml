@@ -37,6 +37,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # github_token: ${{ secrets.LINTER }}
 
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.MEGALINTPR }}
+          commit-message: "[Linter] Apply linters automatic fixes"
+          title: "[Linter] Apply linters automatic fixes"
+          labels: bot
+  # token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+
       # # Create pull request if applicable (for now works only on PR from same repository, not from forks)
       # - name: Create Pull Request with applied fixes
       #   id: cpr
