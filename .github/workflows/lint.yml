@@ -16,10 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     # Test
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
+    permissions: write-all
+    # permissions:
+    #   contents: write
+    #   issues: write
+    #   pull-requests: write
 
     steps:
       - name: Check out Git repository
