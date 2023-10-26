@@ -3,11 +3,11 @@ on:
   # push:
   #   branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 jobs:
   clang-format:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Change Owner of Container Working Directory
         run: chown root:root .
       # - name: Adds GitHub workspace as safe directory
@@ -15,7 +15,7 @@ jobs:
       # - name: Set up JGit
       #   run: |
       #     wget -O jgit.jar https://repo1.maven.org/maven2/org/eclipse/jgit/org.eclipse.jgit/5.13.0.202109080827-r/org.eclipse.jgit-5.13.0.202109080827-r.jar
-      #     alias git="java -jar jgit.jar"      
+      #     alias git="java -jar jgit.jar"
       # - name: Set up Git
       #   run: |
       #     sudo add-apt-repository -y ppa:git-core/ppa
@@ -23,7 +23,7 @@ jobs:
       #     sudo apt-get install -y git
       # - name: Adds GitHub workspace as safe directory
       #   run: git config --global --add safe.directory $GITHUB_WORKSPACE
-        # run: git config --global --add safe.directory /github/workspace
+      # run: git config --global --add safe.directory /github/workspace
       # - uses: actions/checkout@v3.1.0
       - uses: actions/checkout@v2
         # with:
